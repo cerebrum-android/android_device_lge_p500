@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/p500.mk
+    $(LOCAL_DIR)/full_p500.mk
