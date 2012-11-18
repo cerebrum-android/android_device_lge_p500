@@ -10,7 +10,7 @@ $(call inherit-product, vendor/cerebrum/config/common_full_phone.mk)
 $(call inherit-product, device/lge/p500/p500.mk)
 
 
-PRODUCT_NAME := cerebrum_p500
+PRODUCT_NAME := full_p500
 PRODUCT_DEVICE := p500
 PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG-P500
