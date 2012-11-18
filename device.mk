@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
     
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/prebuild/kernel:kernel
+	$(LOCAL_PATH)/prebuilt/kernel:kernel
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.camera=msm7x27 \
