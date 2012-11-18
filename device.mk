@@ -38,6 +38,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nvram.txt:system/etc/wl/nvram.txt \
     $(LOCAL_PATH)/configs/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/prebuild/kernel:kernel
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.camera=msm7x27 \
