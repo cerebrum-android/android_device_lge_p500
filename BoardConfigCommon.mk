@@ -102,6 +102,9 @@ BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun/file
 # Touch screen compatibility for ICS
 BOARD_USE_LEGACY_TOUCHSCREEN := true
 
+# Force rebuild of stlport
+STLPORT_FORCE_REBUILD := true
+
 # Wi-Fi & Wi-Fi HotSpot
 WPA_SUPPLICANT_VERSION          := VER_0_6_X
 BOARD_WLAN_DEVICE               := bcm4325
