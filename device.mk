@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/AudioFilter.csv:system/etc/AudioFilter.csv \
     $(LOCAL_PATH)/configs/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/nvram.txt:system/etc/wl/nvram.txt \
     $(LOCAL_PATH)/configs/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
@@ -51,16 +52,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=false \
     ro.vold.umsdirtyratio=20
 
+# Battery life hacks
+PRODUCT_PROPERTY_OVERRIDES += \
+    # Turn off RIL when not needed
+    ro.ril.disable.power.collapse=1
+    # Better sleep system
+    pm.sleep_mode=1
+    # Scan for WiFi less often to increase batery life
+    wifi.supplicant_scan_interval=180
+
 PRODUCT_PROPERTY_OVERRIDES += \
     com.qc.hardware=true \
     com.qc.hdmi_out=false \
     debug.sf.hw=1 \
     debug.enabletr=false \
+    debug.hwui.render_dirty_regions=false \
     debug.composition.type=mdp \
     debug.gr.numframebuffers=2 \
     debug.qctwa.statusbar=1 \
     debug.qctwa.preservebuf=1 \
-    debug.hwui.render_dirty_regions=false \
     hwui.render_dirty_regions=false \
     hwui.disable_vsync=true \
     hwui.print_config=choice \
