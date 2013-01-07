@@ -104,7 +104,7 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 # COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
 
 ## RIL
-BOARD_PROVIDES_LIBRIL := true
+#BOARD_PROVIDES_LIBRIL := true
 
 ## Mass Storage for Jelly Bean
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
